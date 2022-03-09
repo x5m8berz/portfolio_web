@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background: #444;
-  color: white; }
+  color: white;
+  height: 100%;
+  margin: 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 6rem; }
