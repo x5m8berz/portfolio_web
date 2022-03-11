@@ -1,6 +1,11 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 
+
+@mixin easeOut {
+    transition : all 0.5s ease-out;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -40,6 +45,7 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
+
 }
 
 .text-secondary {
@@ -49,6 +55,7 @@ header {
 main {
     padding: 4rem;
     height: 100%;
+    // margin-top: 20vh;
 
     .icons {
         margin-top: 1rem;
@@ -57,8 +64,17 @@ main {
             padding: 0.4rem;
 
             &:hover{
-                color: $secondary-color
+                color: $secondary-color;
+                @include easeOut();
             }
+        }
+    }
+
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+
         }
     }
 
