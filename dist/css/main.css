@@ -39,7 +39,18 @@
     overflow: hidden; }
   .menu-nav {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    list-style: none;
+    transform: translate3d();
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #444;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
 
 * {
   box-sizing: border-box; }

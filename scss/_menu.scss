@@ -69,7 +69,27 @@
     &-nav {
         margin: 0;
         padding: 0;
-        // background: darken(&primary-color, 5);
+        // background: darken(&primary-color, 5); 
+        list-style: none;
+        transform: translate3d();
+        @include easeOut;
 
+        &.show {
+            //slide in from top 
+            transform: translate3d(0, 0, 0);
+        }
     }
+
+     //Branding Side
+     &-branding {
+         background: $primary-color;
+         transform: translate3d(0,0,0);
+         @include easeOut;
+
+         &.show {
+             //Slide in from bottom
+             transform: translate3d(0, 0, 0 );
+         }
+         
+     }
 }
