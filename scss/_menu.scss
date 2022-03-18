@@ -1,3 +1,4 @@
+
 //menu
 .menu-btn {
     position: absolute;
@@ -47,7 +48,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity:0.9;
+    opacity: 0.9;
     visibility: hidden;
 
     &.show {
@@ -69,9 +70,9 @@
     &-nav {
         margin: 0;
         padding: 0;
-        // background: darken(&primary-color, 5); 
+        background: darken($color: $primary-color, $amount: 5);
         list-style: none;
-        transform: translate3d();
+        transform: translate3d(0, -100%, 0);
         @include easeOut;
 
         &.show {
@@ -83,13 +84,43 @@
      //Branding Side
      &-branding {
          background: $primary-color;
-         transform: translate3d(0,0,0);
+         transform: translate3d(0,100%,0);
          @include easeOut;
 
          &.show {
              //Slide in from bottom
              transform: translate3d(0, 0, 0 );
          }
-         
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: url(../img/portrait6.jpg);
+            border: solid 3px $secondary-color;
+               
+            
+        }         
      }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
+        &.show{
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    .nav-link {
+        display: inline-block;
+        position: relative;
+    }
+}
+
+// Delay nav item slide by 0.1
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+    } 
 }
