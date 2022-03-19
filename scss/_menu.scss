@@ -13,7 +13,7 @@
         height: 3px;
         width: 28px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut();
        
     }
