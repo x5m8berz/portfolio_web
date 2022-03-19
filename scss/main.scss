@@ -1,8 +1,6 @@
 @import 'config';
 @import 'menu';
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -117,6 +115,48 @@ main {
         border-bottom: $secondary-color 5px solid;
     }
 }
+
+// Work.html
+.projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    img {
+        width: 100%;
+        border: white solid 3px;
+        &:hover {
+            border-color: $secondary-color;
+            opacity: 0.5;
+            @include easeOut;
+        }
+    }
+}
+
+// Button Styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($color: $primary-color, $amount: 50);
+
+}
+
+.btn-light{
+    @extend .btn;
+    background: lighten($color: $primary-color, $amount: 50);
+    color: black;
+}
+
 
 #main-footer {
     text-align: center;
