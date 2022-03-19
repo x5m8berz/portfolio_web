@@ -8,7 +8,7 @@
   .menu-btn .btn-line {
     height: 3px;
     width: 28px;
-    margin: 0 0 5px 0;
+    margin: 0 -15px 5px 0;
     background: white;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
@@ -185,6 +185,25 @@ main {
       opacity: 0.5;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    border: 3px white solid;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1rem;
+      background: #eece1a;
+      color: black; }
+      .boxes div:hover span {
+        color: black; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -247,10 +266,14 @@ main {
     grid-template-areas: 'bioimage'  'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+  .boxes div {
+    font-size: 1.4rem; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 1.1rem; } }
