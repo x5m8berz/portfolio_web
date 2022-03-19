@@ -56,16 +56,25 @@
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background: url(../img/portrait6.jpg);
+      background: url(../img/portrait.jpg);
       border: solid 3px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #eece1a; }
   .menu .nav-link {
     display: inline-block;
-    position: relative; }
+    position: relative;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-weight: 300; }
+    .menu .nav-link:hover {
+      color: #eece1a;
+      transition: all 0.5s ease-out; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
